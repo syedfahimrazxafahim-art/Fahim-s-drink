@@ -1,0 +1,206 @@
+/* ============================================================
+   JUICE BOTTLE SCROLL ANIMATION &bull; STYLES
+   ============================================================ */
+
+/* Minimal subtle preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #f7d5dc;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.preloader-ring {
+  width: 44px;
+  height: 44px;
+  border: 3px solid rgba(216, 71, 109, 0.18);
+  border-top-color: #d8476d;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.preloader-percent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b82a50;
+  letter-spacing: 1px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Subtle Scroll Hint (fades out as soon as user scrolls) */
+.scroll-hint {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #b82a50;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.scroll-hint.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(12px);
+}
+
+.scroll-mouse-icon {
+  width: 20px;
+  height: 32px;
+  border: 2px solid rgba(184, 42, 80, 0.65);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll-wheel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 6px;
+  background: #b82a50;
+  border-radius: 2px;
+  animation: mouseWheel 1.6s infinite ease-in-out;
+}
+
+@keyframes mouseWheel {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  75% { transform: translate(-50%, 8px); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 0; }
+}
+
+/* Scroll Animation Section Track */
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 380vh; /* Delivers smooth, deliberate ~20-25px per frame pacing */
+  background: #f7d5dc;
+  user-select: none;
+  cursor: grab;
+}
+
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+/* Fixed / Sticky Full-Screen Viewport */
+.canvas-sticky-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7d5dc;
+}
+
+/* Fullscreen Canvas */
+#sequenceCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Hero Title Overlay (Fahim's Drink) */
+.hero-title-overlay {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  width: 90%;
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  will-change: opacity, transform;
+}
+
+@media (max-width: 640px) {
+  .hero-title-overlay {
+    top: 10%;
+  }
+}
+
+/* Smooth scrolling and section offset for fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id], [id="scrollContainer"] {
+  scroll-margin-top: 80px;
+}
+
+/* Transparent Glass Navigation Bar */
+#mainNavbar {
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.02);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mainNavbar.nav-scrolled {
+  background: rgba(252, 249, 244, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(221, 191, 195, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #a72c53;
+  transition: width 0.25s ease;
+  border-radius: 9999px;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}

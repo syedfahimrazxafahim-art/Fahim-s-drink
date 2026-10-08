@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Zip files
+*.zip
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Scratch / temp files
+test_nav.js
+merge.js

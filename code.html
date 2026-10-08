@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-container": "#876f6d", "on-tertiary-fixed": "#271716", "secondary": "#48654b", "primary-container": "#c7466b", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#564240", "on-surface": "#1c1c19", "primary-fixed": "#ffd9df", "on-error-container": "#93000a", "tertiary-fixed": "#fadcd9", "error-container": "#ffdad6", "secondary-fixed": "#caebc9", "primary": "#a72c53", "tertiary": "#6d5755", "inverse-surface": "#31302d", "inverse-on-surface": "#f3f0eb", "outline-variant": "#ddbfc3", "surface-container-low": "#f6f3ee", "on-secondary-container": "#4c6a4f", "surface": "#fcf9f4", "on-primary-fixed-variant": "#8a143e", "surface-bright": "#fcf9f4", "surface-container-highest": "#e5e2dd", "surface-container": "#f0ede9", "on-secondary-fixed": "#05210c", "secondary-container": "#c7e8c6", "on-error": "#ffffff", "surface-tint": "#aa2f55", "surface-container-lowest": "#ffffff", "inverse-primary": "#ffb1c0", "tertiary-fixed-dim": "#ddc0bd", "background": "#fcf9f4", "surface-dim": "#dcdad5", "surface-container-high": "#ebe8e3", "on-surface-variant": "#574145", "on-background": "#1c1c19", "surface-variant": "#e5e2dd", "on-primary-fixed": "#3f0017", "secondary-fixed-dim": "#aecfae", "on-secondary-fixed-variant": "#314d34", "on-primary-container": "#fffbff", "on-secondary": "#ffffff", "error": "#ba1a1a", "primary-fixed-dim": "#ffb1c0", "on-tertiary": "#ffffff", "on-tertiary-container": "#fffbff", "outline": "#8a7175" }, borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" }, spacing: { "space-xs": "0.25rem", "margin-mobile": "1.5rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "space-xl": "3rem", "space-lg": "1.75rem", "gutter": "1.5rem", margin: "4rem", "space-md": "1rem" }, fontFamily: { "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md-mobile": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], display: ["Playfair Display"], "display-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"] }, fontSize: { "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }], "body-md": ["16px", { lineHeight: "26px", fontWeight: "400" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "headline-md-mobile": ["24px", { lineHeight: "32px", fontWeight: "500" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600" }], "headline-md": ["32px", { lineHeight: "40px", fontWeight: "500" }], "body-sm": ["14px", { lineHeight: "22px", fontWeight: "400" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.04em", fontWeight: "600" }], display: ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "600" }], "display-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "600" }], "headline-sm": ["22px", { lineHeight: "30px", fontWeight: "600" }], "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.015em", fontWeight: "500" }], "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "500" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
+      <div class="flex items-center gap-3"><img alt="Roseberry Botanical Drink Logo" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1WsfCUL3QVY5c8klbe5Ra-lZAxNwUH5JKjdXRFkVnRQEPURcmNyB8Tb7zxmsrsdIm5TGRDYwC9t_6a1n74KXPFGhXgfuSX7XK5m5Y3eoKSh-qwTFUu2UqZHdQouL8zm4k6i81kfevLmTwBqMgkggkbe0YAzWeCUrYpAXmdSolL_YrwryYz4g-nTF1EIRLUV3VtE5eiP9y2z9YOnETsUpMniPfM_vMpv3QmKVp3g6Bo" /><span
+          class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">Roseberry</span></div>
+      <nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary font-bold"><a aria-current="page"
+          class="transition-colors text-primary font-bold" data-path="the-blend" href="#">The Blend</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="flavor-profile" href="#">Flavor Profile</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="ingredients-nutrition" href="#">Ingredients &amp; Nutrition</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="mockup-studio" href="#">Mockup Studio</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="reviews" href="#">Reviews</a><a
+          class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="shop" href="#">Shop</a></nav>
+      <div class="flex items-center gap-4"><a
+          class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high hover:bg-surface-container-highest transition-colors"
+          data-path="cart" href="#"><span
+            class="material-symbols-outlined text-primary text-[20px]">local_mall</span><span
+            class="font-label-md text-label-md text-on-surface">Cart (0)</span></a><a
+          class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-[0_16px_40px_-12px_rgba(209,77,114,0.18)]"
+          data-path="shop" href="#">Order Now</a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+    <div class="flex flex-col w-full">
+      <!-- Hero Section -->
+      <section class="relative w-full overflow-hidden bg-surface py-12 lg:py-24">
+        <!-- Ambient Rose Glow Accents -->
+        <div
+          class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div
+          class="absolute bottom-10 right-10 w-96 h-96 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <!-- Text Column -->
+            <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-tertiary-fixed text-primary font-label-sm text-label-sm uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                Botanical Fusion • Limited Edition 250ml
+              </div>
+              <h1 class="font-display text-display lg:text-[72px] leading-[1.08] text-on-surface tracking-tight">
+                Subtle Damask Rose Meets Ripe Highland Strawberry.
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A velvety, cold-crafted smoothie drink mockup crafted with delicate Bulgarian rosewater, freshly picked
+                organic strawberries, and creamy oat milk. Crisp, fragrant, and exquisitely balanced.
+              </p>
+              <!-- CTAs -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all"
+                  href="#order-section">
+                  Shop Roseberry ($4.50)
+                  <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+                </a>
+                <a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-lg text-label-lg transition-colors"
+                  href="#mockup-specs">
+                  <span class="material-symbols-outlined mr-2 text-[20px]">view_in_ar</span>
+                  Explore 3D Bottle Specs
+                </a>
+              </div>
+              <!-- Key Stats Row -->
+              <div
+                class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full pt-8 mt-4 border-t-0 bg-surface-container-low/70 p-6 rounded-2xl backdrop-blur-sm">
+                <div>
+                  <span class="block font-headline-sm text-headline-sm text-primary font-bold">0g</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Added Sugars</span>
+                </div>
+                <div>
+                  <span class="block font-headline-sm text-headline-sm text-secondary font-bold">100%</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Highland Berry</span>
+                </div>
+                <div>
+                  <span class="block font-headline-sm text-headline-sm text-on-surface font-bold">45</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Calories / Serving</span>
+                </div>
+                <div>
+                  <span class="block font-headline-sm text-headline-sm text-primary font-bold">Cold</span>
+                  <span class="font-label-md text-label-md text-on-surface-variant">Hydrosol Distilled</span>
+                </div>
+              </div>
+            </div>
+            <!-- Bottle Visual Column -->
+            <div class="lg:col-span-5 relative flex justify-center items-center">
+              <!-- Aura circular panel -->
+              <div
+                class="w-[340px] sm:w-[420px] h-[340px] sm:h-[420px] rounded-full bg-surface-container-high/80 absolute -z-0 shadow-2xl shadow-primary/10">
+              </div>
+              <!-- Product Render with Floating Badges -->
+              <div class="relative z-10 py-6">
+                <img alt="Roseberry Strawberry Smoothie 250ml Glass Bottle"
+                  class="max-h-[540px] sm:max-h-[620px] w-auto drop-shadow-2xl hover:scale-[1.01] transition-transform duration-500 object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX-pjLlC55CocG26vsmSD7hpC7ZGMuupyzmsy24rG-GngLDUD8SJL_vtHY62tkVseBfDRGn3lknneV47-FDBKnXpqpX97k8DLPopnoRkfGW9PFd2h-EpTcACjU7lz968QPf-dEwke8lB_n8icjbBq05a0OUmBI4Fwl1dZWiePkaskh-yXMnxYAQEmBFdE380CyN6EzMwBxz5zluZv0dnUEFsD66VZCAIp7FEUSwsgWleyrYD3Evi4" />
+                <!-- Floating Tag 1 -->
+                <div
+                  class="absolute top-12 -left-6 sm:-left-12 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2 animate-bounce hover:animate-none">
+                  <span class="material-symbols-outlined text-primary text-[20px]">spa</span>
+                  <div class="text-left">
+                    <p class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Infusion</p>
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">Petal Extract</p>
+                  </div>
+                </div>
+                <!-- Floating Tag 2 -->
+                <div
+                  class="absolute bottom-24 -right-4 sm:-right-8 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[20px]">water_drop</span>
+                  <div class="text-left">
+                    <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Texture</p>
+                    <p class="font-label-md text-label-md text-on-surface font-semibold">Velvety Smooth</p>
+                  </div>
+                </div>
+                <!-- Floating Tag 3 -->
+                <div
+                  class="absolute bottom-6 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-2 rounded-full shadow-md flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-on-surface-variant text-[16px]">recycling</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Recyclable Glass
+                    250ml</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sensory & Flavor Profile Breakdown -->
+      <section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-2 block">Sommelier Taste
+                Spectrum</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">The Sensory Architecture</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              A three-tier olfactory progression orchestrated to provide instant botanical refreshment followed by
+              delicate, rounded creaminess.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Top Note -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+              <div class="w-2 h-full absolute left-0 top-0 bg-primary"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-label-sm text-label-sm uppercase text-primary tracking-widest font-bold">Top
+                    Note</span>
+                  <span class="material-symbols-outlined text-primary text-[28px]">local_florist</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Damask Rose Petal</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  An ethereal, cooling vapor with delicate rose distillate that awakens the olfactory senses immediately
+                  upon uncapping. Crisp floral lift without artificial perfume notes.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-surface-container flex items-center justify-between">
+                <span class="font-label-md text-label-md text-on-surface-variant">Perception Speed</span>
+                <span class="font-label-md text-label-md text-primary font-bold">Instant • 0–3s</span>
+              </div>
+            </div>
+            <!-- Body -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+              <div class="w-2 h-full absolute left-0 top-0 bg-primary-container"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="font-label-sm text-label-sm uppercase text-primary-container tracking-widest font-bold">Heart
+                    Note</span>
+                  <span class="material-symbols-outlined text-primary-container text-[28px]">nutrition</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Wild Highland Strawberry</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Sun-drenched alpine strawberry pulp offering pure natural sweetness, vibrant berry tartness, and
+                  authentic micro-seed mouthfeel that anchors the beverage.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-surface-container flex items-center justify-between">
+                <span class="font-label-md text-label-md text-on-surface-variant">Mouthfeel Body</span>
+                <span class="font-label-md text-primary-container font-bold">Lush • Velvety</span>
+              </div>
+            </div>
+            <!-- Finish -->
+            <div
+              class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
+              <div class="w-2 h-full absolute left-0 top-0 bg-secondary"></div>
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-label-sm text-label-sm uppercase text-secondary tracking-widest font-bold">Base
+                    Finish</span>
+                  <span class="material-symbols-outlined text-secondary text-[28px]">grass</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Oat Cream &amp; Hibiscus</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Subtle cultured oat milk emulsion providing a lingering, dairy-free silkiness balanced with faint
+                  acidic hibiscus that leaves the palate clean and recharged.
+                </p>
+              </div>
+              <div class="pt-6 mt-6 border-t border-surface-container flex items-center justify-between">
+                <span class="font-label-md text-label-md text-on-surface-variant">Finish Persistence</span>
+                <span class="font-label-md text-secondary font-bold">Clean • 15s+</span>
+              </div>
+            </div>
+          </div>
+          <!-- Tasting Meter Dashboard -->
+          <div class="bg-surface-container p-8 lg:p-10 rounded-2xl">
+            <h4 class="font-headline-sm text-headline-sm text-on-surface mb-8 text-center sm:text-left">Botanical
+              Tasting Dial</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Sweetness -->
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="font-label-lg text-label-lg text-on-surface">Sweetness</span>
+                  <span class="font-label-md text-label-md text-primary font-bold">3.0 / 5</span>
+                </div>
+                <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-primary rounded-full" style="width: 60%"></div>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Naturally derived fruit fructose, unrefined
+                </p>
+              </div>
+              <!-- Floral Intensity -->
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="font-label-lg text-label-lg text-on-surface">Floral Intensity</span>
+                  <span class="font-label-md text-label-md text-primary font-bold">4.0 / 5</span>
+                </div>
+                <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Prominent fresh organic Damask petals</p>
+              </div>
+              <!-- Acidity -->
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="font-label-lg text-label-lg text-on-surface">Tart Acidity</span>
+                  <span class="font-label-md text-label-md text-secondary font-bold">2.0 / 5</span>
+                </div>
+                <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-secondary rounded-full" style="width: 40%"></div>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Soft crispness preventing syrupy heaviness
+                </p>
+              </div>
+              <!-- Creaminess -->
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="font-label-lg text-label-lg text-on-surface">Creaminess</span>
+                  <span class="font-label-md text-label-md text-secondary font-bold">4.0 / 5</span>
+                </div>
+                <div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-secondary rounded-full" style="width: 80%"></div>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Rich oat cream emulsion mouthfeel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- The Mockup & Packaging Design Story -->
+      <section class="w-full bg-surface py-20 px-6 lg:px-12" id="mockup-specs">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Visual Presentation -->
+            <div class="lg:col-span-5 bg-surface-container p-8 rounded-2xl flex flex-col items-center relative">
+              <div
+                class="absolute top-6 left-6 px-3 py-1 bg-surface-container-lowest rounded-full font-label-sm text-label-sm text-on-surface uppercase tracking-wider">
+                Industrial Render 01
+              </div>
+              <img alt="Detailed 250ml Smoothie Bottle Mockup Angle"
+                class="max-h-[480px] w-auto my-6 drop-shadow-xl object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_33JrGqQbTZd07dJMeZAudIf7fuxrphLYbY50avImvzlFn_GS5pJDmcZQrniC58JOUZayDSGW7nJQXuzhPmL2RoUCc3d29JoTdmQpSWvWQYbDp51AosyfAG2-swdZhz25NdxE1KYMzCXt44yPkHhifj1qM81O5GBkzkrWmmO43D2pE1xmmF0Bv3Gaa0rF0uihcTfRKn1VyEwwVR43eVi0rWpmJsEaDDjtx9HOsaat7HmXK5Bac5k" />
+              <div class="w-full grid grid-cols-2 gap-3 text-center">
+                <div class="p-3 bg-surface-container-lowest rounded-xl">
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Apothecary Lip</span>
+                  <p class="font-label-md text-label-md text-on-surface font-semibold">28mm ROPP Cap</p>
+                </div>
+                <div class="p-3 bg-surface-container-lowest rounded-xl">
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Base Stability</span>
+                  <p class="font-label-md text-label-md text-on-surface font-semibold">Embossed Grip Rim</p>
+                </div>
+              </div>
+            </div>
+            <!-- Design Philosophy & Specs -->
+            <div class="lg:col-span-7 flex flex-col space-y-6">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Packaging
+                Ergonomics &amp; Graphic Grid</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface">
+                Crafted for Design &amp; Taste: The 250ml Glass Silhouette
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Engineered with a tailored tactile silhouette that bridges clean Nordic minimalism with vintage European
+                apothecary bottles. The vertical typography motif allows the naturally vibrant pink strawberry smoothie
+                to visually frame the brand identity.
+              </p>
+              <!-- Highlights Checklist -->
+              <div class="space-y-4 py-2">
+                <div class="flex items-start gap-3">
+                  <div class="p-1 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-[18px]">done</span>
+                  </div>
+                  <div>
+                    <h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Bold Vertical Kinetic Labeling
+                    </h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">The vertical typographic wordmark
+                      creates an iconic shelf-presence designed for modern digital mockups and editorial lifestyle
+                      photography.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="p-1 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-[18px]">done</span>
+                  </div>
+                  <div>
+                    <h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Tactile Ultra-Clear Flint
+                      Glass</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">High-grade recyclable flint glass
+                      preserving organoleptic purity with no chemical migration or microplastics.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="p-1 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center mt-1">
+                    <span class="material-symbols-outlined text-[18px]">done</span>
+                  </div>
+                  <div>
+                    <h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Designer Mockup Kit Included
+                    </h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Includes editable Smart Object PSD
+                      templates with isolated lighting passes, condensation overlay, and displacement maps.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Spec Sheet Matrix -->
+              <div class="bg-surface-container-low p-6 rounded-2xl grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Height</span>
+                  <span class="font-label-lg text-label-lg text-on-surface font-bold">168 mm</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Body Diameter</span>
+                  <span class="font-label-lg text-label-lg text-on-surface font-bold">58.5 mm</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Label Surface</span>
+                  <span class="font-label-lg text-label-lg text-on-surface font-bold">180 x 95 mm</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase text-on-surface-variant block">Print
+                    Finishes</span>
+                  <span class="font-label-lg text-label-lg text-primary font-bold">Spot UV / Matte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Botanical Ingredients & Nutrition Spotlight -->
+      <section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-2 block">Purity Without
+              Compromise</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">Whole Botanical Formulation</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Every drop of Roseberry is cold-crafted using organic harvest ingredients sourced from regenerative
+              growers.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Ingredients 4-Card Grid -->
+            <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-primary mb-4">
+                    <span class="material-symbols-outlined text-[26px]">spa</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Bulgarian Damask Hydrosol</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Steam-distilled organic rose petals harvested at sunrise in the Valley of the Roses. Rich in
+                    polyphenols that support digestion and provide a natural, calming sensory lift.
+                  </p>
+                </div>
+                <span class="inline-block mt-4 font-label-sm text-label-sm uppercase text-primary font-bold">Valley of
+                  the Roses, Kazanlak</span>
+              </div>
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-primary-container mb-4">
+                    <span class="material-symbols-outlined text-[26px]">energy_savings_leaf</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Highland Alpine Strawberries</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Sun-ripened organic strawberries selected for maximum natural ruby color and high vitamin C potency.
+                    Cold-pureed to preserve living enzymes and micro-fiber.
+                  </p>
+                </div>
+                <span
+                  class="inline-block mt-4 font-label-sm text-label-sm uppercase text-primary-container font-bold">100%
+                  Certified Organic Certified</span>
+              </div>
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
+                    <span class="material-symbols-outlined text-[26px]">grain</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Silky Cultured Oat Cream</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Naturally gluten-free whole oat base cultured with botanical enzymes for a velvety dairy-free
+                    consistency that cradles the sweet and floral notes.
+                  </p>
+                </div>
+                <span class="inline-block mt-4 font-label-sm text-label-sm uppercase text-secondary font-bold">Zero Gums
+                  • Zero Emulsifiers</span>
+              </div>
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface-variant mb-4">
+                    <span class="material-symbols-outlined text-[26px]">water_ph</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Himalayan Salt &amp; Baobab</h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    A subtle touch of mineral-rich pink salt and African organic baobab fruit powder providing gentle
+                    cellular hydration and balancing floral sweetness.
+                  </p>
+                </div>
+                <span class="inline-block mt-4 font-label-sm text-label-sm uppercase text-on-surface font-bold">Natural
+                  Bio-Electrolytes</span>
+              </div>
+            </div>
+            <!-- Clean Label Nutrition Facts -->
+            <div class="lg:col-span-4 bg-surface-container-lowest p-8 rounded-2xl shadow-sm">
+              <div class="border-b-4 border-on-surface pb-3 mb-4">
+                <h3 class="font-display text-[28px] leading-tight text-on-surface font-bold">Nutrition Facts</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Serving size 1 Bottle (250 ml)</p>
+              </div>
+              <div class="flex justify-between items-baseline border-b-2 border-on-surface py-2 mb-4">
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase font-bold block">Amount Per Serving</span>
+                  <span class="font-headline-md text-headline-md font-bold text-on-surface">Calories</span>
+                </div>
+                <span class="font-display text-headline-lg font-bold text-on-surface">45</span>
+              </div>
+              <div class="space-y-2 text-on-surface font-body-sm text-body-sm">
+                <div class="flex justify-between py-1 border-b border-surface-container">
+                  <span class="font-bold">Total Fat <span class="font-normal">0.5g</span></span>
+                  <span class="font-bold">1%</span>
+                </div>
+                <div class="flex justify-between py-1 pl-4 border-b border-surface-container text-on-surface-variant">
+                  <span>Saturated Fat 0g</span>
+                  <span>0%</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-surface-container">
+                  <span class="font-bold">Sodium <span class="font-normal">35mg</span></span>
+                  <span class="font-bold">2%</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-surface-container">
+                  <span class="font-bold">Total Carbohydrate <span class="font-normal">9g</span></span>
+                  <span class="font-bold">3%</span>
+                </div>
+                <div class="flex justify-between py-1 pl-4 border-b border-surface-container text-on-surface-variant">
+                  <span>Dietary Fiber 2g</span>
+                  <span>7%</span>
+                </div>
+                <div class="flex justify-between py-1 pl-4 border-b border-surface-container text-on-surface-variant">
+                  <span>Total Sugars 7g</span>
+                  <span></span>
+                </div>
+                <div class="flex justify-between py-1 pl-6 border-b border-surface-container text-primary font-medium">
+                  <span>Includes 0g Added Sugars</span>
+                  <span class="font-bold">0%</span>
+                </div>
+                <div class="flex justify-between py-1 border-b-2 border-on-surface">
+                  <span class="font-bold">Protein <span class="font-normal">1g</span></span>
+                  <span>2%</span>
+                </div>
+              </div>
+              <div class="pt-4 space-y-1 font-label-sm text-label-sm text-on-surface-variant">
+                <p>• Vitamin C: 65mg (70% DV)</p>
+                <p>• Potassium: 180mg (4% DV)</p>
+                <p>• Calcium: 40mg (4% DV)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Packaging Variants & Bundle Options (E-Commerce Buy Box) -->
+      <section class="w-full bg-surface py-20 px-6 lg:px-12" id="order-section">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Interactive Preview Mockup Showcase -->
+            <div
+              class="lg:col-span-5 flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-3xl relative">
+              <div class="relative w-full flex items-center justify-center py-6">
+                <img alt="Roseberry Smoothie Bottle Bundle Preview"
+                  class="max-h-[500px] w-auto drop-shadow-2xl transition-all duration-300" id="bundle-preview-img"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTX7CGbDL4-uYOtNkE1UZLFOUboVei708QoftCZX8u4LTEpKed5H5VVApr1wxgs1xRmh5rQBG2DotggnHzjlUnOdDIKDN-KSdUlQguW1dMXmt4XP6_ngem3uHZi6Ys1lSV8R-_wAYYCJhTg4Fbj7b09gRNbo3Ru-oI3L2lN7geJVU0_W5prvIQSdPe5lQO3fnDgpnC-YVJ5upJqxsbbiZm8tku8q1glwUKLxWGPiPvyrIQ9vyJrgk" />
+              </div>
+              <div class="mt-4 flex items-center gap-2 px-4 py-2 bg-surface rounded-full shadow-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                <span class="font-label-md text-label-md text-on-surface">Freshly Bottled in Small Batches</span>
+              </div>
+            </div>
+            <!-- Buy Box Control Panel -->
+            <div class="lg:col-span-7 flex flex-col space-y-8">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="flex text-primary">
+                    <span class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[20px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <span class="font-label-md text-label-md text-on-surface font-semibold">4.9 / 5 (840+ Botanist
+                    Reviews)</span>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Select Your Harvest Experience</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Chilled door-to-door delivery in insulated, compostable wool liners to preserve floral aromatics.
+                </p>
+              </div>
+              <!-- Bundle Options -->
+              <div class="space-y-4">
+                <!-- Option 1: Single -->
+                <label
+                  class="bundle-card flex items-center justify-between p-5 rounded-2xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high"
+                  onclick="selectBundle(1, '$4.50')">
+                  <div class="flex items-center gap-4">
+                    <input class="w-5 h-5 text-primary focus:ring-primary accent-primary cursor-pointer"
+                      name="bundle_choice" type="radio" value="1" />
+                    <div>
+                      <span class="font-headline-sm text-headline-sm text-on-surface block">Single Bottle (250ml)</span>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Ideal introduction to the Damask
+                        Rose ritual</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-bold">$4.50</span>
+                  </div>
+                </label>
+                <!-- Option 2: 4-Pack (Active/Popular) -->
+                <label
+                  class="bundle-card flex items-center justify-between p-5 rounded-2xl bg-surface-container-high ring-2 ring-primary/40 cursor-pointer transition-all"
+                  onclick="selectBundle(4, '$16.00')">
+                  <div class="flex items-center gap-4">
+                    <input checked="" class="w-5 h-5 text-primary focus:ring-primary accent-primary cursor-pointer"
+                      name="bundle_choice" type="radio" value="4" />
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface">Taster 4-Pack</span>
+                        <span
+                          class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase font-semibold">Most
+                          Loved</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Curated botanical presentation box
+                        ($4.00 / bottle)</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-headline-sm text-headline-sm text-primary font-bold">$16.00</span>
+                    <span class="block font-label-sm text-label-sm text-on-surface-variant line-through">$18.00</span>
+                  </div>
+                </label>
+                <!-- Option 3: 12-Case -->
+                <label
+                  class="bundle-card flex items-center justify-between p-5 rounded-2xl bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high"
+                  onclick="selectBundle(12, '$44.00')">
+                  <div class="flex items-center gap-4">
+                    <input class="w-5 h-5 text-primary focus:ring-primary accent-primary cursor-pointer"
+                      name="bundle_choice" type="radio" value="12" />
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <span class="font-headline-sm text-headline-sm text-on-surface">Case of 12 Bottles</span>
+                        <span
+                          class="px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-sm text-label-sm font-semibold">Free
+                          Cold Ship</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm text-on-surface-variant">Daily wellness pantry stock ($3.66
+                        / bottle)</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span class="font-headline-sm text-headline-sm text-on-surface font-bold">$44.00</span>
+                    <span class="block font-label-sm text-label-sm text-on-surface-variant line-through">$54.00</span>
+                  </div>
+                </label>
+              </div>
+              <!-- Subscription Toggle -->
+              <div class="p-4 bg-tertiary-fixed rounded-2xl flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[24px]">autorenew</span>
+                  <div>
+                    <span class="font-label-lg text-label-lg text-on-surface font-semibold">Subscribe &amp; Save
+                      15%</span>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Fresh deliveries bi-weekly or monthly.
+                      Pause or cancel anytime.</p>
+                  </div>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input class="sr-only peer" id="sub-toggle" onchange="toggleSubscription()" type="checkbox" />
+                  <div
+                    class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                  </div>
+                </label>
+              </div>
+              <!-- Checkout Action -->
+              <div class="space-y-4">
+                <button
+                  class="w-full py-4 px-8 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3"
+                  id="add-to-cart-btn">
+                  <span class="material-symbols-outlined text-[20px]">local_mall</span>
+                  <span id="btn-label-text">Add Taster 4-Pack to Cart • $16.00</span>
+                </button>
+                <!-- Satisfaction Guarantee Badges -->
+                <div
+                  class="flex flex-wrap items-center justify-center gap-6 pt-2 text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                    30-Day Pure Taste Guarantee
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">ac_unit</span>
+                    Refrigerated Carbon-Neutral Delivery
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Press & Sommelier Reviews -->
+      <section class="w-full bg-surface-container-low py-20 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-2 block">Critique &amp;
+              Acclaim</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">Echoes From the Culinary Vanguard</h2>
+          </div>
+          <!-- Editorial Press Quotes -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+              <div>
+                <span
+                  class="font-headline-sm text-headline-sm text-primary font-serif font-bold italic block mb-4">Vogue
+                  Living</span>
+                <p class="font-body-md text-body-md text-on-surface italic">
+                  "Roseberry transforms an everyday wellness drink into an ethereal botanical high-fashion moment. The
+                  rose aromatics are breathtaking."
+                </p>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-6 block">Summer Botanical Guide</span>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+              <div>
+                <span
+                  class="font-headline-sm text-headline-sm text-on-surface font-serif font-bold italic block mb-4">Bon
+                  Appétit</span>
+                <p class="font-body-md text-body-md text-on-surface italic">
+                  "Finally, a strawberry drink that isn't cloying. The Highland berry pulp grounded with Bulgarian
+                  hydrosol strikes an enviable equilibrium."
+                </p>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-6 block">Drink of the Season
+                Selection</span>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+              <div>
+                <span
+                  class="font-headline-sm text-headline-sm text-secondary font-serif font-bold italic block mb-4">Beverage
+                  Digest</span>
+                <p class="font-body-md text-body-md text-on-surface italic">
+                  "The design of the 250ml glass silhouette alongside its clean nutrition credential makes it the
+                  premier modern shelf standout."
+                </p>
+              </div>
+              <span class="font-label-md text-label-md text-on-surface-variant mt-6 block">Excellence in Bottle
+                Design</span>
+            </div>
+          </div>
+          <!-- Verified Community Reviews -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-1 text-primary mb-3">
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface mb-4">
+                  "The scent the moment you twist open the cap is pure Bulgarian rose garden. It has this velvety oat
+                  creaminess that feels deeply luxurious as an afternoon ritual."
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-surface-container">
+                <span class="font-label-md text-label-md text-on-surface font-semibold">Camille D. — Verified
+                  Sommelier</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Paris, France</span>
+              </div>
+            </div>
+            <div class="p-6 bg-surface-container-lowest rounded-2xl shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-1 text-primary mb-3">
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface mb-4">
+                  "Not only does it taste refreshing, but the mockup design and physical bottle on my desk is a work of
+                  art. The vertical typography on clear glass is gorgeous."
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-surface-container">
+                <span class="font-label-md text-label-md text-on-surface font-semibold">Marcus K. — Creative
+                  Director</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Stockholm, Sweden</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Accordion & Sustainability Pledge -->
+      <section class="w-full bg-surface py-20 px-6 lg:px-12">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-2 block">Clear
+              Answers</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Inquiries</h2>
+          </div>
+          <div class="space-y-4 mb-20" id="faq-accordion">
+            <!-- Question 1 -->
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden transition-colors">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+                onclick="toggleFaq(this)">
+                <span class="font-headline-sm text-headline-sm text-on-surface">How is the Roseberry drink preserved
+                  without chemicals?</span>
+                <span
+                  class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 hidden text-on-surface-variant font-body-md text-body-md">
+                We employ High-Pressure Processing (HPP) which uses cold water under hyper-baric pressure to neutralize
+                bacteria while keeping fresh enzymes, raw vitamin C, and delicate rose terpenes 100% active. Keep
+                refrigerated between 2°C – 6°C for up to 45 days.
+              </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden transition-colors">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+                onclick="toggleFaq(this)">
+                <span class="font-headline-sm text-headline-sm text-on-surface">Where do your organic Damask roses come
+                  from?</span>
+                <span
+                  class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 hidden text-on-surface-variant font-body-md text-body-md">
+                Our petals are harvested by hand exclusively during the dawn bloom in the Rose Valley of Bulgaria. They
+                undergo immediate low-temperature copper alembic distillation to preserve the genuine aromatic profile
+                without smoky or artificial burnt nuances.
+              </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden transition-colors">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+                onclick="toggleFaq(this)">
+                <span class="font-headline-sm text-headline-sm text-on-surface">Can creators license the 3D bottle
+                  mockup PSD templates?</span>
+                <span
+                  class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 hidden text-on-surface-variant font-body-md text-body-md">
+                Yes! Our packaging design kit includes editable 6000x4000px high-resolution PSD smart-object mockups,
+                ambient refraction layers, and label wireframes. Visit our Mockup Studio page to grab the commercial
+                license.
+              </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden transition-colors">
+              <button class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
+                onclick="toggleFaq(this)">
+                <span class="font-headline-sm text-headline-sm text-on-surface">Is the oat milk gluten-free and non-GMO
+                  verified?</span>
+                <span
+                  class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 hidden text-on-surface-variant font-body-md text-body-md">
+                Absolutely. We source organic non-GMO purity-protocol oats certified &lt; 5ppm gluten. We never add seed
+                oils, carrageenan, gums, or synthetic texturizers to achieve our creaminess.
+              </div>
+            </div>
+          </div>
+          <!-- Sustainability Pledge Card -->
+          <div class="bg-secondary text-on-secondary p-8 lg:p-12 rounded-3xl relative overflow-hidden shadow-xl">
+            <div class="relative z-10 max-w-2xl">
+              <div
+                class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-4">
+                <span class="material-symbols-outlined text-[16px]">eco</span>
+                Closed Loop Ecological Charter
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-secondary mb-4">100% Recyclable Glass &amp;
+                Carbon-Negative Returns</h3>
+              <p class="font-body-md text-body-md text-on-secondary/90 mb-6">
+                Our heavy-flint apothecary bottles are made with 60% post-consumer recycled glass and are infinitely
+                recyclable. Return 12 empty rinsed bottles with your next box to receive a complimentary 250ml botanical
+                infusion.
+              </p>
+              <div class="flex flex-wrap items-center gap-6">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[22px]">nest_eco_leaf</span>
+                  <span class="font-label-md text-label-md">Zero Plastic Seal</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary-fixed text-[22px]">energy_savings_leaf</span>
+                  <span class="font-label-md text-label-md">Biodegradable Wool Insulation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive JavaScript Micro-interactions -->
+      <script>
+        let currentPack = 4;
+        let basePrice = 16.00;
+        let isSubscribed = false;
+
+        function selectBundle(packCount, priceStr) {
+          currentPack = packCount;
+          basePrice = parseFloat(priceStr.replace('$', ''));
+          updatePriceDisplay();
+        }
+
+        function toggleSubscription() {
+          const toggle = document.getElementById('sub-toggle');
+          isSubscribed = toggle.checked;
+          updatePriceDisplay();
+        }
+
+        function updatePriceDisplay() {
+          const btnLabel = document.getElementById('btn-label-text');
+          const finalPrice = isSubscribed ? (basePrice * 0.85) : basePrice;
+          const formattedPrice = '$' + finalPrice.toFixed(2);
+
+          let title = 'Single Bottle (250ml)';
+          if (currentPack === 4) title = 'Taster 4-Pack';
+          if (currentPack === 12) title = 'Case of 12 Bottles';
+
+          if (isSubscribed) {
+            btnLabel.innerText = `Subscribe to ${title} • ${formattedPrice} / auto-ship`;
+          } else {
+            btnLabel.innerText = `Add ${title} to Cart • ${formattedPrice}`;
+          }
+        }
+
+        function toggleFaq(btn) {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+          } else {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+          }
+        }
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+      <div
+        class="p-8 lg:p-12 rounded-xl bg-surface-container mb-16 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div class="max-w-xl"><span
+            class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-2 block">Botanical
+            Privilege</span>
+          <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Sip the Ritual. Enjoy 10% Off.</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">Subscribe for seasonal harvests, sensory notes,
+            and preview access to limited botanical formulations.</p>
+        </div>
+        <form class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto"><input
+            class="px-6 py-3.5 rounded-full bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-1 focus:ring-primary min-w-[280px]"
+            placeholder="Enter your email address" type="email" /><button
+            class="px-8 py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors whitespace-nowrap"
+            type="button">Claim 10% Off</button></form>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
+        <div class="col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4"><img alt="Roseberry Botanical Drink Logo"
+              class="h-7 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1WsfCUL3QVY5c8klbe5Ra-lZAxNwUH5JKjdXRFkVnRQEPURcmNyB8Tb7zxmsrsdIm5TGRDYwC9t_6a1n74KXPFGhXgfuSX7XK5m5Y3eoKSh-qwTFUu2UqZHdQouL8zm4k6i81kfevLmTwBqMgkggkbe0YAzWeCUrYpAXmdSolL_YrwryYz4g-nTF1EIRLUV3VtE5eiP9y2z9YOnETsUpMniPfM_vMpv3QmKVp3g6Bo" /><span
+              class="font-headline-sm text-headline-sm text-primary font-semibold">Roseberry</span></div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Crafted with fresh wild strawberries,
+            cold-distilled organic rose water, and nourishing botanical adaptogens.</p>
+          <div class="flex items-center gap-3"><a aria-label="Instagram"
+              class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+              href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a
+              aria-label="Pinterest"
+              class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+              href="#"><span class="material-symbols-outlined text-[18px]">collections</span></a><a aria-label="TikTok"
+              class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
+              href="#"><span class="material-symbols-outlined text-[18px]">play_circle</span></a></div>
+        </div>
+        <div>
+          <h4 class="font-label-lg text-label-lg text-on-surface mb-4">Flavors &amp; Collection</h4>
+          <ul class="space-y-3">
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Signature Rose Strawberry</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Berry Blossom Sparkler</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              White Peach Rosé Elixir</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Variety Discovery Pack</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-lg text-label-lg text-on-surface mb-4">Branding &amp; Mockups</h4>
+          <ul class="space-y-3">
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Mockup Studio 3D</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Packaging Kit Download</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Press Assets &amp; Guidelines</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Wholesale Display Renders</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-lg text-label-lg text-on-surface mb-4">About &amp; Sourcing</h4>
+          <ul class="space-y-3">
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Damask Rose Sourcing</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Cold-Pressed Technique</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Eco Bottle Philosophy</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Farmer Cooperative Partner</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-label-lg text-label-lg text-on-surface mb-4">Customer Care</h4>
+          <ul class="space-y-3">
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Track Botanical Order</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Shipping &amp; Refrigeration</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Wholesale Inquiries</li>
+            <li
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+              Contact Concierge</li>
+          </ul>
+        </div>
+      </div>
+      <div class="py-8 bg-surface-container rounded-lg px-6 flex flex-wrap items-center justify-around gap-6 mb-12">
+        <div class="flex items-center gap-2"><span
+            class="material-symbols-outlined text-secondary text-[22px]">eco</span><span
+            class="font-label-md text-label-md text-on-surface">100% Organic Certified</span></div>
+        <div class="flex items-center gap-2"><span
+            class="material-symbols-outlined text-secondary text-[22px]">spa</span><span
+            class="font-label-md text-label-md text-on-surface">Vegan &amp; Dairy-Free</span></div>
+        <div class="flex items-center gap-2"><span
+            class="material-symbols-outlined text-secondary text-[22px]">water_drop</span><span
+            class="font-label-md text-label-md text-on-surface">No Added Sugars</span></div>
+        <div class="flex items-center gap-2"><span
+            class="material-symbols-outlined text-secondary text-[22px]">science</span><span
+            class="font-label-md text-label-md text-on-surface">Cold-Pressed Botanical Infusion</span></div>
+      </div>
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Roseberry Botanical Beverages Inc. All
+          rights reserved.</p>
+        <div class="flex items-center gap-6"><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            href="#">Privacy Policy</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            href="#">Terms of Service</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+            href="#">Accessibility</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
